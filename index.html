@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Prueba Maquetado</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <div id="modal">
+      <div class="modal--content">
+        <span class="modal--close" id="modal--close">X</span>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a href="https://www.kavak.com/" target="_blank" class="navbar--logo"><img src="./images/logo.png"></a>
+      <ul class="navbar--options">
+        <li><a href="#">Opcion 1</a></li>
+        <li><a href="#">Opcion 2</a></li>
+        <li><a href="#">Opcion 3</a></li>
+      </ul>
+
+      <div class="navbar--burger" id="burger-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Hello World</h1>
+            <p class="lead">
+              A landing page template
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="container pb-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="mt-5 d-flex justify-content-center">
+            <h2>Grid Section</h2>
+          </div>
+
+          <div id="grid">
+            <div class="grid--content">
+              <span class="grid--element span-salmon"></span>
+              <span class="grid--element span-cyan"></span>
+              <span class="grid--element span-salmon"></span>
+              <span class="grid--element span-cyan"></span>
+              <span class="grid--element span-cyan"></span>
+              <span class="grid--element span-salmon"></span>
+              <span class="grid--element span-salmon"></span>
+              <span class="grid--element span-cyan"></span>
+              <span class="grid--element span-salmon"></span>
+              <span class="grid--element span-cyan"></span>
+              <span class="grid--element span-salmon"></span>
+              <span class="grid--element span-cyan"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+  </body>
+  <script>
+    const button = document.getElementById('burger-button')
+    button.addEventListener('click', e => document.querySelector('.navbar--options').classList.toggle('show'))
+
+    let gridElement = document.querySelectorAll('.grid--element');
+    gridElement.forEach(item =>{
+      item.addEventListener('click', e => document.getElementById('modal').classList.add('show--modal'))
+    })
+
+    const closeModal = document.getElementById('modal--close');
+    closeModal.addEventListener('click', e => document.getElementById('modal').classList.remove('show--modal'))
+  </script>
+</html>
